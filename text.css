@@ -1,0 +1,38 @@
+#title {
+    font-size: 50px;
+    margin-top: 15px;
+}
+
+.title {
+    display: inline;
+    box-shadow: 0 0 5px rgb(255, 0, 64);
+    padding: 5px 10px 5px 10px;
+    border-radius: 999px;
+    border-color: rgb(255, 51, 85);
+    border-style: dashed;
+}
+
+.menu {
+    font-size: 40px;
+    color: rgb(255, 51, 51);
+    border-bottom-style: solid;
+    border-bottom-color:aqua ;
+    border-width: 4px;
+    border-radius: 4px;
+}
+
+.huan {
+    color: rgb(255, 0, 0);
+}
+
+.yin {
+    color: rgb(208, 255, 0);
+}
+
+.guang {
+    color: rgb(255, 0, 221);
+}
+
+.lin {
+    color: rgb(0, 255, 221);
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <title>甜点 - JIM餐馆</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="button.css">
+    <script src="order.js"></script>
+</head>
+
+<body>
+    <h1 align="center" style="color:rgb(227, 34, 245);">甜点</h1>
+    <br />
+    <table>
+        <tr class="font">
+            <td><b>
+                    <font size="5">面</font>
+                </b></td>
+            <td><b>
+                    <font size="5">饮料</font>
+                </b></td>
+            <td><b>
+                    <font size="5">饭</font>
+                </b></td>
+        </tr>
+        <tr>
+
+            <td>
+                <div class="menu-1">
+                    <a href="noodle.html">
+                        <button class="button-3" id="noodle" onclick="noodle()">
+                            <img src="C:\HTML\photo\noodle.jpg" width="115" class="pic-2">
+                        </button>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="menu-1">
+                    <a href="beverage.html">
+                        <button class="button-3" id="beverage" onclick="beverage()">
+                            <img src="C:\HTML\photo\beverage.avif" width="115" class="pic-2">
+                        </button>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="menu-1">
+                    <a href="rice.html">
+                        <button class="button-3" id="rice" onclick="rice()">
+                            <img src="C:\HTML\photo\rice.jpg" class="pic-2">
+                        </button>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <br />
+    <br />
+</body>
+
+<body>
+    <div class="button-5">
+        <p class="name">冰激凌
+            <img src="C:\HTML\photo\ice cream.jpg" width="300" onclick="order('冰激凌')">
+        </p>
+    </div>
+    <div class="button-5">
+        <p class="name">
+            <img src="C:\HTML\photo\ice-kacang.jpg" width="300" onclick="order('红豆冰')">
+            红豆冰
+        </p>
+    </div>
+
+    <div class="button-5">
+        <p class="name">甜甜圈
+            <img src="C:\HTML\photo\donuts.webp" width="300" onclick="order('甜甜圈')">
+        </p>
+    </div>
+    <div class="button-5">
+        <p class="name">
+            <img src="C:\HTML\photo\cake.avif" width="300" onclick="order('蛋糕')">
+            蛋糕
+        </p>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+
+<body>
+    <div class="home">
+        <a href="index.html">
+            <button class="button-4">
+                <img src="C:\HTML\photo\home.png" width="60"></a>
+        </button>
+        </a>
+    </div>
+</body>
+
+<body>
+    <div class="order">
+        <a href="order.html">
+            <button class="button">
+                <img src="C:\HTML\photo\order.png" class="pic" />
+            </button>
+        </a>
+    </div>
+</body>
+
+<!-- JavaScript: 将菜品加入到订单 -->
+<script>
+    // 将点击的菜品添加到当前用户的订单中
+    function order(itemName) {
+        // 获取当前用户的用户名
+        const currentUsername = localStorage.getItem('currentUsername');
+        if (!currentUsername) {
+            alert('请先登录！');
+            return;
+        }
+
+        // 获取当前用户的订单
+        let order = JSON.parse(localStorage.getItem(`order_${currentUsername}`)) || [];
+
+        // 将新的菜品加入订单
+        order.push(itemName);
+
+        // 将更新后的订单保存到 localStorage
+        localStorage.setItem(`order_${currentUsername}`, JSON.stringify(order));
+
+        alert(`${itemName} 已添加到您的订单中！`);
+    }
+</script>
+
+</html>

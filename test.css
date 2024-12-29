@@ -1,0 +1,32 @@
+.order {
+    background-color: transparent;
+}
+
+.pic {
+    width: 70px;
+    height: 70px;
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 3px solid black;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px gray;
+    transition: background-color 0.6s,box-shadow 0.6s;
+}
+
+.button:hover{
+    box-shadow: 3px 3px 30px black ;
+    background-color: aqua;
+}
+
+.button:active{
+    opacity: 0.7;
+    background-color: blue;
+    box-shadow: 0 0 0 ;
+}
